@@ -2,7 +2,6 @@
 #include "Exception.h"
 #include "CException.h"
 
-#define ERR_OUT_OF_BOUND 3
 
 void setUp(void)
 {
@@ -20,10 +19,23 @@ void xtest_Exception_NeedToImplement(void)
 //names is array 3 of pionters to char
 char * names[] = {
 	"Ali",
-	"David",
-	"Ah Beng",
-	"Sally"
+	"B",
+	"C",
+	"David"
 };
+
+
+
+
+
+char *getNameInTable(int index, char *name[], int maxSize){
+	if(index >= maxSize || index < 0)
+		Throw(UNKNOW_PEOPLE);
+		return names[index];
+	
+	
+}
+
 
 char *getName(int index){
 	if(index >= 4 || index < 0 )
