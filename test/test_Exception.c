@@ -1,7 +1,7 @@
 #include "unity.h"
 #include "Exception.h"
 #include "CException.h"
-
+#include <stdio.h>
 
 void setUp(void)
 {
@@ -19,27 +19,17 @@ void xtest_Exception_NeedToImplement(void)
 //names is array 3 of pionters to char
 char * names[] = {
 	"Ali",
-	"B",
-	"C",
-	"David"
+	"David",
+	"Ah Beng",
+	"Sally"
 };
 
 
 
 
-
-char *getNameInTable(int index, char *name[], int maxSize){
-	if(index >= maxSize || index < 0)
-		Throw(UNKNOW_PEOPLE);
-		return names[index];
-	
-	
-}
-
-
 char *getName(int index){
 	if(index >= 4 || index < 0 )
-	Throw(ERR_OUT_OF_BOUND);
+	Throw("Error Out of bound of the array.");
 	return names[index];
 }
 
@@ -56,10 +46,10 @@ Try{
 }
 }
 
+///*
 void test_getName_Given_4_expect_ERR_OUT_OF_BOUND(void){
 	CEXCEPTION_T e;
 	char *name;
-	
 	
 Try{
 	name = getName(4);
@@ -68,11 +58,11 @@ Try{
 	//printf("error code: %d\n",e);
 }		
 }
-
+//*/
+///*
 void test_getName_Given_1_expect_David(void){
 	CEXCEPTION_T e;
 	char *name;
-	
 	
 Try{
 	name = getName(1);
@@ -81,3 +71,4 @@ Try{
 	TEST_FAIL_MESSAGE("Expected not to be thrown, but received one.");
 }		
 }
+//*/
