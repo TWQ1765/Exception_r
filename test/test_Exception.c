@@ -42,7 +42,8 @@ Try{
 	name = getName(-1);
 	TEST_FAIL_MESSAGE("Expected ERR_OUT_OF_BOUND to be thrown, but none.");
 }Catch(e) {
-	//printf("error code: %d\n",e);
+	printf("Under test_getName_Given_minus_1_expect_ERR_OUT_OF_BOUND");
+	printf("\t%s",e);
 }
 }
 
@@ -55,7 +56,8 @@ Try{
 	name = getName(4);
 	TEST_FAIL_MESSAGE("Expected ERR_OUT_OF_BOUND to be thrown, but none.");
 }Catch(e) {
-	//printf("error code: %d\n",e);
+	printf("Under test_getName_Given_4_expect_ERR_OUT_OF_BOUND");
+	printf("\t%s",e);
 }		
 }
 //*/
